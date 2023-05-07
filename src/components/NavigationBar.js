@@ -18,7 +18,7 @@ const NavigationBar = ({ setActiveBurgerMenu }) => {
                     : styles.wrapper
             }
         >
-            <Link to="/" style={{ textDecoration: 'none', outline: 'none' }}>
+            <Link to={path.homepage} style={{ textDecoration: 'none', outline: 'none' }}>
                 <button className={styles.homeButton}>
                     <h1 className={styles.title}>Cozy House</h1>
                     <h2 className={styles.subtitle}>

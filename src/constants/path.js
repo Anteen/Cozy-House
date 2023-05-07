@@ -1,5 +1,5 @@
 const path = {
-    homepage: '/',
-    ourPetsPage: '/our-pets'
+    homepage: '/Cozy-House/About',
+    ourPetsPage: '/Cozy-House/our-pets'
 }
 export default path
