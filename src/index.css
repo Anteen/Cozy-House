@@ -1,0 +1,12 @@
+@import '../src/styles/SimpleResetCSS.css' ;
+
+* {
+   font-family: Georgia, 'Times New Roman', Times, serif;
+}
+body {
+  font-family:'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+

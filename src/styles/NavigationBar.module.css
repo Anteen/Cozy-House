@@ -1,0 +1,113 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+.ourPetsWrapper .title {
+    color: #545454;
+}
+
+.ourPetsWrapper .subtitle,
+.ourPetsWrapper .button {
+    color: #292929;
+}
+
+.labelWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.title {
+    font-size: 32px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 35px;
+    display: flex;
+    align-items: center;
+    letter-spacing: .06em;
+    color: #f1cdb3;
+}
+
+.subtitle {
+    font-family: 'Arial';
+    font-size: 13px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 15px;
+    display: flex;
+    align-items: center;
+    letter-spacing: .1em;
+    color: #fff;
+}
+
+.navigationWrapper {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.button,
+.homeButton,
+.ourPetsButton {
+    font-family: 'Arial';
+    font-size: 15px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 24px;
+    position: relative;
+    z-index: 100;
+    cursor: pointer;
+    color: #fafafa;
+    border: none;
+    background: none;
+}
+
+.homeButton {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.button::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    content: '';
+    transition: all .1s ease-in-out;
+    background-color: #f1cdb3;
+}
+
+.buttonActive::before {
+    width: 100%;
+}
+
+.button:hover::before,
+.ourPetsButton:hover::before {
+    width: 100%;
+}
+
+.burger {
+    position: relative;
+    z-index: 100;
+    display: none;
+    margin-right: 13px;
+    cursor: pointer;
+    border: none;
+    background-color: unset;
+}
+
+@media screen and (max-width: 740px) {
+    .navigationWrapper {
+        display: none;
+    }
+
+    .burger {
+        display: block;
+    }
+}
