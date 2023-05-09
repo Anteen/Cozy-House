@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/Cozy-House/static/css/main.ed750bdd.css",
-    "main.js": "/Cozy-House/static/js/main.d7c3f319.js",
+    "main.css": "/Cozy-House/static/css/main.69011152.css",
+    "main.js": "/Cozy-House/static/js/main.b28a7a5f.js",
     "static/media/image_processing20210309-8585-aa8t55.gif": "/Cozy-House/static/media/image_processing20210309-8585-aa8t55.eaa33f97dd1ef0ee7743.gif",
+    "static/media/cozy-burger-background.webp": "/Cozy-House/static/media/cozy-burger-background.220f8cd5aecc6d3a1bdb.webp",
     "static/media/start-screen-puppy.webp": "/Cozy-House/static/media/start-screen-puppy.ed345d9ae370e7498ac3.webp",
     "static/media/donation-dog.webp": "/Cozy-House/static/media/donation-dog.b61cf847670844f40db3.webp",
     "static/media/about-pets.webp": "/Cozy-House/static/media/about-pets.63ae5529b02758dd82a6.webp",
     "static/media/icon-transportation.svg": "/Cozy-House/static/media/icon-transportation.a5188f228071a4025316075a2e2c31b3.svg",
-    "static/media/Dog-and-Cat.webp": "/Cozy-House/static/media/Dog-and-Cat.5cb6e49c7486f5231bd3.webp",
+    "static/media/dog-and-cat.webp": "/Cozy-House/static/media/dog-and-cat.5cb6e49c7486f5231bd3.webp",
     "static/media/footer-puppy.webp": "/Cozy-House/static/media/footer-puppy.cc66763ab0c7d9ba4a35.webp",
     "static/media/icon-collars-leashes.svg": "/Cozy-House/static/media/icon-collars-leashes.48828d4ee82ea7fda29867834d8f867d.svg",
     "static/media/icon-sleeping-area.svg": "/Cozy-House/static/media/icon-sleeping-area.d04077097e9ed8b6442baaf43b303523.svg",
@@ -22,16 +23,16 @@
     "static/media/credit-card.svg": "/Cozy-House/static/media/credit-card.b0a55b5f9acb325550a024c941c60044.svg",
     "static/media/icon-marker.svg": "/Cozy-House/static/media/icon-marker.123c22bef80634c1c98876d314d75f19.svg",
     "index.html": "/Cozy-House/index.html",
-    "static/media/close-lg-svgrepo-com.svg": "/Cozy-House/static/media/close-lg-svgrepo-com.675c3a8d32344671b381ce2a42b177f0.svg",
+    "static/media/close-lg-svgrepo-com.svg": "/Cozy-House/static/media/close-lg-svgrepo-com.27275553f88b1cd946b0de196b6af45c.svg",
     "static/media/burger.svg": "/Cozy-House/static/media/burger.466481b1cb7fe5eda00834474eb10495.svg",
     "static/media/burger-black.svg": "/Cozy-House/static/media/burger-black.44a5dc7dc3033723a699a93b61d87e3c.svg",
     "static/media/arrow-right.svg": "/Cozy-House/static/media/arrow-right.598f3c03b8a07625e96d.svg",
     "static/media/arrow-left.svg": "/Cozy-House/static/media/arrow-left.1727643124ea11e85f20.svg",
-    "main.ed750bdd.css.map": "/Cozy-House/static/css/main.ed750bdd.css.map",
-    "main.d7c3f319.js.map": "/Cozy-House/static/js/main.d7c3f319.js.map"
+    "main.69011152.css.map": "/Cozy-House/static/css/main.69011152.css.map",
+    "main.b28a7a5f.js.map": "/Cozy-House/static/js/main.b28a7a5f.js.map"
   },
   "entrypoints": [
-    "static/css/main.ed750bdd.css",
-    "static/js/main.d7c3f319.js"
+    "static/css/main.69011152.css",
+    "static/js/main.b28a7a5f.js"
   ]
 }
