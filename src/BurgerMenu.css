@@ -15,7 +15,20 @@
     right: 0;
     bottom: 0;
     width: 60vw;
-    background-color: white;
+    animation: slideInRight .5s forwards;
+    background: url(./assets/images/webp/cozy-burger-background.webp);
+    background-color: rgba(0, 0, 0, .5);
+    background-size: cover;
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
 }
 
 .burgerActive button {
@@ -27,7 +40,6 @@
     display: flex;
     align-items: center;
     text-align: center;
-    text-decoration: underline;
     letter-spacing: .06em;
     border: 0;
     background-color: unset;
@@ -43,10 +55,18 @@
 
 .navigationWrapper {
     display: flex;
+    align-items: center;
     flex-direction: column;
+    width: fit-content;
     margin: 100px 0 0 20px;
     color: black;
     gap: 20px;
+}
+
+.navigationWrapper li {
+    width: fit-content;
+    border-radius: 20px;
+    background-color: bisque;
 }
 
 @media screen and (max-width: 520px) {

@@ -75,6 +75,7 @@
     line-height: 18px;
     display: flex;
     align-items: center;
+    width: 93.335%;
     color: #b2b2b2;
 }
 
@@ -116,13 +117,23 @@
     .title {
         font-size: 25px;
         line-height: 130%;
-
         text-align: center;
         letter-spacing: .06em;
     }
 
+    .subtitle {
+        font-family: 'Arial';
+        font-size: 15px;
+        font-weight: 400;
+        font-style: normal;
+        line-height: 160%;
+        justify-content: center;
+        width: 93.335%;
+        letter-spacing: .1px;
+    }
+
     .button {
-        width: 281px;
+        width: 93.335%;
     }
 
     .number {

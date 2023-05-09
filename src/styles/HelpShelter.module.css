@@ -29,7 +29,13 @@
 
 @media screen and (max-width: 769px) {
     .cardWrapper {
-        gap: 60px;
+        display: grid;
+        justify-content: space-between;
+        width: 100%;
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows: repeat(3, auto);
+        gap: unset;
+        row-gap: 55px;
     }
 }
 
@@ -38,13 +44,18 @@
         padding: 42px 0;
     }
 
-    .cardWrapper {
-        gap: 30px;
-    }
-
     .title {
         font-size: 25px;
         line-height: 130%;
         letter-spacing: .06em;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .cardWrapper {
+        justify-content: space-around;
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(5, auto);
+        row-gap: 30px;
     }
 }

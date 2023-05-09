@@ -10,10 +10,12 @@ import BurgerMenu from './BurgerMenu';
 import axios from 'axios';
 import { catsApi, dogsApi } from './services/api';
 import Preloader from './Preloader';
+import PageNotFound from './components/PageNotFound';
 
 const App = () => {
     const [activeBurgerMenu, setActiveBurgerMenu] = useState(false);
     const [petsList, setPetsList] = useState([]);
+    const [isNotFound, setIsNotFound] = useState(false);
 
     useEffect(() => {
         const fetchPets = async () => {
@@ -53,10 +55,14 @@ const App = () => {
     return (
         <div className="App">
             <Router>
-                <header className="header">
+                <header
+                    className="header"
+                    style={isNotFound ? { display: 'none' } : null}
+                >
                     <div className="container">
                         <NavigationBar
                             setActiveBurgerMenu={setActiveBurgerMenu}
+                            setIsNotFound={setIsNotFound}
                         />
                     </div>
                 </header>
@@ -69,8 +75,12 @@ const App = () => {
                         path={path.ourPetsPage}
                         element={<OurPetsPage petsList={petsList} />}
                     />
+                    <Route
+                        path={path.notFoundPage}
+                        element={<PageNotFound />}
+                    />
                 </Routes>
-                <footer>
+                <footer style={isNotFound ? { display: 'none' } : null}>
                     <FooterBlock />
                 </footer>
                 <BurgerMenu

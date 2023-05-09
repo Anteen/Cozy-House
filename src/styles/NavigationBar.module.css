@@ -6,13 +6,16 @@
     height: 100%;
 }
 
-.ourPetsWrapper .title {
+.ourPetsWrapper .title,
+.notFoundWrapper .title {
     color: #545454;
 }
 
 .ourPetsWrapper .subtitle,
-.ourPetsWrapper .button {
-    color: #292929;
+.ourPetsWrapper .button,
+.notFoundWrapper .subtitle,
+.notFoundWrapper .button {
+    color: #545454;
 }
 
 .labelWrapper {
@@ -61,13 +64,14 @@
     position: relative;
     z-index: 100;
     cursor: pointer;
-    color: #fafafa;
+    color: #cdcdcd;
     border: none;
     background: none;
 }
 
 .homeButton {
     display: flex;
+    align-items: end;
     flex-direction: column;
     gap: 10px;
 }
@@ -90,6 +94,16 @@
 .button:hover::before,
 .ourPetsButton:hover::before {
     width: 100%;
+}
+
+.homepageActive {
+    color: #fafafa;
+}
+
+.ourPetsPageActive,
+.helpingPageActive,
+.contactsPageActive {
+    color: #292929 !important;
 }
 
 .burger {

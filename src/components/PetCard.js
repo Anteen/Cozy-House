@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from '../styles/PetCard.module.css';
-import altImage from '../assets/images/webp/Dog-and-Cat.webp';
+import altImage from '../assets/images/webp/dog-and-cat.webp';
 
 const PetCard = ({ name, image }) => {
     

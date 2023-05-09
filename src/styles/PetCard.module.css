@@ -56,8 +56,12 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-
     width: 100%;
     height: 270px;
     background-color: #f1cdb3;
+}
+
+.image,
+.altImage {
+    border-radius: 9px 9px 0 0;
 }

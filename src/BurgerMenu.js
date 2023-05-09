@@ -44,17 +44,29 @@ const BurgerMenu = ({ activeBurgerMenu, setActiveBurgerMenu }) => {
                     </button>
                     <ul className="navigationWrapper">
                         <li>
-                            <Link to={path.homepage}>
+                            <Link
+                                to={path.homepage}
+                                style={{
+                                    textDecoration: 'none',
+                                    outline: 'none',
+                                }}
+                            >
                                 <button
                                     className="button"
                                     onClick={() => setActiveBurgerMenu(false)}
                                 >
-                                    About the shelter
+                                    About <br /> the shelter
                                 </button>
                             </Link>
                         </li>
                         <li>
-                            <Link to={path.ourPetsPage}>
+                            <Link
+                                to={path.ourPetsPage}
+                                style={{
+                                    textDecoration: 'none',
+                                    outline: 'none',
+                                }}
+                            >
                                 <button
                                     className="button"
                                     onClick={() => setActiveBurgerMenu(false)}
@@ -64,10 +76,36 @@ const BurgerMenu = ({ activeBurgerMenu, setActiveBurgerMenu }) => {
                             </Link>
                         </li>
                         <li>
-                            <button className="button">Help the shelter</button>
+                            <Link
+                                to={path.notFoundPage}
+                                style={{
+                                    textDecoration: 'none',
+                                    outline: 'none',
+                                }}
+                            >
+                                <button
+                                    className="button"
+                                    onClick={() => setActiveBurgerMenu(false)}
+                                >
+                                    Help <br /> the shelter
+                                </button>
+                            </Link>
                         </li>
                         <li>
-                            <button className="button">Contacts</button>
+                            <Link
+                                to={path.notFoundPage}
+                                style={{
+                                    textDecoration: 'none',
+                                    outline: 'none',
+                                }}
+                            >
+                                <button
+                                    className="button"
+                                    onClick={() => setActiveBurgerMenu(false)}
+                                >
+                                    Contacts
+                                </button>
+                            </Link>
                         </li>
                     </ul>
                 </div>

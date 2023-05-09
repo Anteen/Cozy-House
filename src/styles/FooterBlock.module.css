@@ -12,7 +12,7 @@
     display: flex;
     justify-content: space-between;
     max-width: 716px;
-    padding: 56px 0 0 40px;
+    padding: 40px 0 60px 40px;
 }
 
 @media screen and (max-width: 1130px) {
@@ -35,6 +35,7 @@
     .contentWrapper {
         align-items: center;
         flex-direction: column;
+        justify-content: space-between;
         gap: 40px;
     }
 

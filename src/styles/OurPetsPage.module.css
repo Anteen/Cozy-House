@@ -1,6 +1,6 @@
 .wrapper {
     margin-top: 120px;
-    padding: 80px 0 100px;
+    padding: 80px 0 70px;
     background: #f6f6f6;
 }
 
@@ -64,4 +64,16 @@
     color: #cdcdcd;
     border: 2px solid #cdcdcd;
     background-color: #f6f6f6;
+}
+
+@media screen and (max-width: 920px) {
+    .wrapper {
+        padding: 40px 0 56px;
+    }
+}
+
+@media screen and (max-width: 590px) {
+    .wrapper {
+        padding: 40px 0 0;
+    }
 }
