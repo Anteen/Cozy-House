@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../../styles/StartScreen.module.css';
+import styles from './StartScreen.module.css';
 import headerDog from '../../assets/images/webp/start-screen-puppy.webp';
 
 const StartScreen = () => {
@@ -7,7 +7,7 @@ const StartScreen = () => {
     return (
         <div className={styles.wrapper}>
             <div className="container">
-                <img src={headerDog} className={styles.dogImage} />
+                <img src={headerDog} className={styles.dogImage} alt='cute puppy'/>
                 <div className={styles.contentWrapper}>
                     <h2 className={styles.title}>
                         Not only people <br /> need a house

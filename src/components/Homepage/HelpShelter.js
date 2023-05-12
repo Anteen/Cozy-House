@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../../styles/HelpShelter.module.css';
+import styles from './HelpShelter.module.css';
 import helpingData from '../../data/helpingData';
 import HelpingCard from '../Homepage/HelpingCard'
 

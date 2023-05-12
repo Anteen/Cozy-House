@@ -1,15 +1,15 @@
 import './App.css';
 import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { catsApi, dogsApi } from './services/api';
+import axios from 'axios';
 import Homepage from './components/Homepage/Homepage';
 import OurPetsPage from './components/OurPetsPage/OurPetsPage';
 import NavigationBar from './components/NavigationBar';
 import FooterBlock from './components/FooterBlock';
 import path from './constants/path';
-import BurgerMenu from './BurgerMenu';
-import axios from 'axios';
-import { catsApi, dogsApi } from './services/api';
-import Preloader from './Preloader';
+import BurgerMenu from './components/BurgerMenu';
+import Preloader from './components/Preloader';
 import PageNotFound from './components/PageNotFound';
 
 const App = () => {

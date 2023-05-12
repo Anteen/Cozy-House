@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../styles/FooterBlock.module.css';
+import styles from './FooterBlock.module.css';
 import footerDog from '../assets/images/webp/footer-puppy.webp';
 import footerData from '../data/footerData';
 import FooterContent from './Homepage/FooterContent'
@@ -9,7 +9,7 @@ function FooterBlock() {
     return (
         <div className={styles.wrapper}>
             <div className="container">
-                <img src={footerDog} className={styles.dogImage} />
+                <img src={footerDog} className={styles.dogImage} alt='dog image'/>
                 <div className={styles.contentWrapper}>
                     {footerData.map((el, index) => {
                         return (

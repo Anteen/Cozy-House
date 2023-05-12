@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../../styles/AboutHouse.module.css';
+import styles from './AboutHouse.module.css';
 import aboutPets from '../../assets/images/webp/about-pets.webp';
 
 function AboutHouse() {
@@ -7,7 +7,7 @@ function AboutHouse() {
         <div className={styles.wrapper}>
             <div className="container">
                 <div className={styles.contentWrapper}>
-                    <img src={aboutPets} />
+                    <img src={aboutPets} alt='dog image'/>
                     <div className={styles.textContentWrapper}>
                         <h3 className={styles.title}>About the shelter <br/> “Cozy House”</h3>
                         <p className={styles.text}>

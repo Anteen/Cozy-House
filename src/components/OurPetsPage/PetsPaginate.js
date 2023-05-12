@@ -2,7 +2,7 @@ import React from 'react';
 import { useState, useRef, useEffect } from 'react';
 import ReactPaginate from 'react-paginate';
 import PetCard from '../PetCard';
-import styles from '../../styles/PetsPaginate.module.css';
+import styles from './PetsPaginate.module.css';
 
 const PetsPaginate = ({ petsList }) => {
     const [currentPage, setCurrentPage] = useState(0);

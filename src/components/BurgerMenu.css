@@ -16,7 +16,7 @@
     bottom: 0;
     width: 60vw;
     animation: slideInRight .5s forwards;
-    background: url(./assets/images/webp/cozy-burger-background.webp);
+    background: url(../assets/images/webp/cozy-burger-background.webp);
     background-color: rgba(0, 0, 0, .5);
     background-size: cover;
 }

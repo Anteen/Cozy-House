@@ -1,10 +1,10 @@
 import React from 'react'
-import styles from '../../styles/HelpingCard.module.css'
+import styles from './HelpingCard.module.css'
 
 const HelpingCard = ({image, title}) => {
   return (
     <div className={styles.wrapper}>
-        <img className={styles.image} src={image} />
+        <img className={styles.image} src={image} alt='icon'/>
         <p className={styles.title}>{title}</p>
     </div>
   )

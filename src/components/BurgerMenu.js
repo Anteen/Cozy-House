@@ -3,8 +3,8 @@ import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import reactDom from 'react-dom';
 import './BurgerMenu.css';
-import path from './constants/path';
-import closeButton from './assets/images/close-lg-svgrepo-com.svg';
+import path from '../constants/path'
+import closeButton from '../assets/images/close-lg-svgrepo-com.svg';
 
 const burgerMenuElement = document.querySelector('#burger-menu');
 

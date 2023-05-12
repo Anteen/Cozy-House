@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../../styles/Donation.module.css';
+import styles from './Donation.module.css';
 import donationDog from '../../assets/images/webp/donation-dog.webp';
 import creditCard from '../../assets/images/credit-card.svg'
 
@@ -8,7 +8,7 @@ function Donation() {
         <div className={styles.wrapper}>
             <div className="container">
                 <div className={styles.contentWrapper}>
-                    <img src={donationDog} className={styles.dogImage}/>
+                    <img src={donationDog} className={styles.dogImage} alt='puppy'/>
                     <div className={styles.descriptionWrapper}>
                         <h3 className={styles.title}>
                             You can also <br/> make a donation
@@ -17,7 +17,7 @@ function Donation() {
                             Name of the bank / Type of bank account
                         </p>
                         <button className={styles.button}>
-                            <img src={creditCard} />
+                            <img src={creditCard} alt='credit card'/>
                             <h4 className={styles.number}>8380 2880 8028 8791 7435</h4>
                         </button>
                         <p className={styles.smallText}>
