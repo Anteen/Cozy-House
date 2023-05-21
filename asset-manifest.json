@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Cozy-House/static/css/main.bff31b8c.css",
-    "main.js": "/Cozy-House/static/js/main.be6fad73.js",
+    "main.css": "/Cozy-House/static/css/main.89065723.css",
+    "main.js": "/Cozy-House/static/js/main.03b4d5bd.js",
     "static/media/image_processing20210309-8585-aa8t55.gif": "/Cozy-House/static/media/image_processing20210309-8585-aa8t55.eaa33f97dd1ef0ee7743.gif",
     "static/media/cozy-burger-background.webp": "/Cozy-House/static/media/cozy-burger-background.220f8cd5aecc6d3a1bdb.webp",
     "static/media/start-screen-puppy.webp": "/Cozy-House/static/media/start-screen-puppy.ed345d9ae370e7498ac3.webp",
@@ -28,11 +28,11 @@
     "static/media/burger-black.svg": "/Cozy-House/static/media/burger-black.44a5dc7dc3033723a699a93b61d87e3c.svg",
     "static/media/arrow-right.svg": "/Cozy-House/static/media/arrow-right.598f3c03b8a07625e96d.svg",
     "static/media/arrow-left.svg": "/Cozy-House/static/media/arrow-left.1727643124ea11e85f20.svg",
-    "main.bff31b8c.css.map": "/Cozy-House/static/css/main.bff31b8c.css.map",
-    "main.be6fad73.js.map": "/Cozy-House/static/js/main.be6fad73.js.map"
+    "main.89065723.css.map": "/Cozy-House/static/css/main.89065723.css.map",
+    "main.03b4d5bd.js.map": "/Cozy-House/static/js/main.03b4d5bd.js.map"
   },
   "entrypoints": [
-    "static/css/main.bff31b8c.css",
-    "static/js/main.be6fad73.js"
+    "static/css/main.89065723.css",
+    "static/js/main.03b4d5bd.js"
   ]
 }
