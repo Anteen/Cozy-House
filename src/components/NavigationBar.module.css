@@ -7,10 +7,7 @@
 }
 
 .ourPetsWrapper .title,
-.notFoundWrapper .title {
-    color: #545454;
-}
-
+.notFoundWrapper .title,
 .ourPetsWrapper .subtitle,
 .ourPetsWrapper .button,
 .notFoundWrapper .subtitle,
@@ -96,7 +93,7 @@
     width: 100%;
 }
 
-.homepageActive {
+.homePageActive {
     color: #fafafa;
 }
 

@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './PageNotFound.module.css';
 import { Link } from 'react-router-dom';
 import dogPicture from '../assets/images/webp/donation-dog.webp';
-import path from '../constants/path';
+import Pathes from '../constants/Pathes';
 
 const PageNotFound = () => {
 
@@ -11,7 +11,7 @@ const PageNotFound = () => {
             <img src={dogPicture} alt="error page" />
             <h3 className={styles.title}>Oops, something went wrong</h3>
             <div className={styles.linkContainer}>
-                <Link className={styles.link} to={path.homepage}>
+                <Link className={styles.link} to={Pathes.homePage}>
                     Go Home
                 </Link>
             </div>

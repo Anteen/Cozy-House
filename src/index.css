@@ -1,12 +1,10 @@
-@import '../src/styles/SimpleResetCSS.css' ;
+@import '../src/styles/DefaultStyles.css';
 
 * {
-   font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
+
 body {
-  font-family:'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: 'Roboto', 'Ubuntu', 'Helvetica Neue',
     sans-serif;
 }
-
-

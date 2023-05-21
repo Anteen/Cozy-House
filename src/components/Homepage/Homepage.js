@@ -1,11 +1,11 @@
 import React from 'react';
-import AboutHouse from '../Homepage/AboutHouse';
-import PetsSlider from '../Homepage/PetsSlider';
-import HelpShelter from '../Homepage/HelpShelter';
-import Donation from '../Homepage/Donation';
+import AboutHouse from './AboutHouse';
+import PetsSlider from './PetsSlider';
+import HelpShelter from './HelpShelter';
+import Donation from './Donation';
 import StartScreen from './StartScreen';
 
-const Homepage = ({ petsList }) => {
+const HomePage = ({ petsList }) => {
     
     return (
         <main>
@@ -18,4 +18,4 @@ const Homepage = ({ petsList }) => {
     );
 };
 
-export default Homepage;
+export default HomePage;

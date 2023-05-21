@@ -4,14 +4,14 @@ import { useLocation } from 'react-router-dom';
 import styles from './NavigationBar.module.css';
 import burgerImage from '../assets/images/burger.svg';
 import burgerImageBlack from '../assets/images/burger-black.svg';
-import path from '../constants/path';
+import Pathes from '../constants/Pathes';
 
 const NavigationBar = ({ setActiveBurgerMenu, setIsNotFound }) => {
     const location = useLocation();
 
     useEffect(() => {
         const changeStyles = () => {
-            if (location.pathname === path.notFoundPage) {
+            if (location.pathname === Pathes.notFoundPage) {
                 setIsNotFound(true);
             } else {
                 setIsNotFound(false);
@@ -23,31 +23,31 @@ const NavigationBar = ({ setActiveBurgerMenu, setIsNotFound }) => {
     return (
         <nav
             className={
-                location.pathname === path.ourPetsPage
+                location.pathname === Pathes.ourPetsPage
                     ? `${styles.wrapper} ${styles.ourPetsWrapper}`
-                    : location.pathname === path.notFoundPage
+                    : location.pathname === Pathes.notFoundPage
                     ? `${styles.wrapper} ${styles.notFoundWrapper}`
                     : styles.wrapper
             }
         >
             <Link
-                to={path.homepage}
+                to={Pathes.homePage}
                 style={{ textDecoration: 'none', outline: 'none' }}
             >
                 <button className={styles.homeButton}>
-                    <h1 className={styles.title}>Cozy House</h1>
-                    <h2 className={styles.subtitle}>
+                    <h2 className={styles.title}>Cozy House</h2>
+                    <h1 className={styles.subtitle}>
                         Shelter for pets in Boston
-                    </h2>
+                    </h1>
                 </button>
             </Link>
             <ul className={styles.navigationWrapper}>
                 <li>
-                    <Link to={path.homepage}>
+                    <Link to={Pathes.homePage}>
                         <button
                             className={
-                                location.pathname === path.homepage
-                                    ? `${styles.button} ${styles.buttonActive} ${styles.homepageActive}`
+                                location.pathname === Pathes.homePage
+                                    ? `${styles.button} ${styles.buttonActive} ${styles.homePageActive}`
                                     : styles.button
                             }
                         >
@@ -56,10 +56,10 @@ const NavigationBar = ({ setActiveBurgerMenu, setIsNotFound }) => {
                     </Link>
                 </li>
                 <li>
-                    <Link to={path.ourPetsPage}>
+                    <Link to={Pathes.ourPetsPage}>
                         <button
                             className={
-                                location.pathname === path.ourPetsPage
+                                location.pathname === Pathes.ourPetsPage
                                     ? `${styles.button} ${styles.buttonActive} ${styles.ourPetsPageActive}`
                                     : styles.button
                             }
@@ -69,10 +69,10 @@ const NavigationBar = ({ setActiveBurgerMenu, setIsNotFound }) => {
                     </Link>
                 </li>
                 <li>
-                    <Link to={path.notFoundPage}>
+                    <Link to={Pathes.notFoundPage}>
                         <button
                             className={
-                                location.pathname === path.helpingPage
+                                location.pathname === Pathes.helpingPage
                                     ? `${styles.button} ${styles.buttonActive} ${styles.helpingPageActive}`
                                     : styles.button
                             }
@@ -82,10 +82,10 @@ const NavigationBar = ({ setActiveBurgerMenu, setIsNotFound }) => {
                     </Link>
                 </li>
                 <li>
-                    <Link to={path.notFoundPage}>
+                    <Link to={Pathes.notFoundPage}>
                         <button
                             className={
-                                location.pathname === path.contactsPage
+                                location.pathname === Pathes.contactsPage
                                     ? `${styles.button} ${styles.buttonActive} ${styles.contactsPageActive}`
                                     : styles.button
                             }
@@ -99,7 +99,7 @@ const NavigationBar = ({ setActiveBurgerMenu, setIsNotFound }) => {
                 className={styles.burger}
                 onClick={() => setActiveBurgerMenu(true)}
             >
-                {location.pathname === path.ourPetsPage ? (
+                {location.pathname === Pathes.ourPetsPage ? (
                     <img src={burgerImageBlack} />
                 ) : (
                     <img src={burgerImage} />

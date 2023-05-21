@@ -1,12 +1,12 @@
 import React from 'react';
-import loadGif from '../assets/gif/image_processing20210309-8585-aa8t55.gif';
+import preloaderGif from '../assets/gif/image_processing20210309-8585-aa8t55.gif';
 import './Preloader.css';
 
 const Preloader = () => {
     
     return (
         <div className="preloaderWrapper">
-            <img src={loadGif} alt='loading' className="preloaderGif" />
+            <img src={preloaderGif} alt='loading' className="preloaderGif" />
         </div>
     );
 };

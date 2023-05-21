@@ -1,35 +1,22 @@
-import React from 'react';
-import { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import ReactPaginate from 'react-paginate';
 import PetCard from '../PetCard';
 import styles from './PetsPaginate.module.css';
+import { handleResize } from '../../utilites/paginateSettings';
 
 const PetsPaginate = ({ petsList }) => {
-    const [currentPage, setCurrentPage] = useState(0);
-    const [itemsPerPage, setItemsPerPage] = useState(8);
-    const [disableStartButton, setDisableStartButton] = useState(styles.button);
-    const [disableEndButton, setDisableEndButton] = useState(styles.button);
-    const pageCount = Math.ceil(petsList.length / itemsPerPage);
+  const [currentPage, setCurrentPage] = useState(0);
+  const [itemsPerPage, setItemsPerPage] = useState(8);
+  const [disableStartButton, setDisableStartButton] = useState(styles.button);
+  const [disableEndButton, setDisableEndButton] = useState(styles.button);
+  const pageCount = Math.ceil(petsList.length / itemsPerPage);
 
-    useEffect(() => {
-        const handleResize = () => {
-            const width = window.innerWidth;
-            let newItemsPerPage = 8;
-            if (width < 1200) {
-                newItemsPerPage = 9;
-            }
-            if (width < 920) {
-                newItemsPerPage = 6;
-            }
-            if (width < 620) {
-                newItemsPerPage = 3;
-            }
-            setItemsPerPage(newItemsPerPage);
-        };
-        window.addEventListener('resize', handleResize);
-        handleResize();
-        return () => window.removeEventListener('resize', handleResize);
-    }, []);
+  useEffect(() => {
+    const handleResizeWrapper = () => handleResize(setItemsPerPage);
+    window.addEventListener('resize', handleResizeWrapper);
+    handleResizeWrapper();
+    return () => window.removeEventListener('resize', handleResizeWrapper);
+  }, []);
 
     useEffect(() => {
         const getStartButtonClass = () => {

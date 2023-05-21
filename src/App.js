@@ -1,13 +1,13 @@
-import './App.css';
-import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { catsApi, dogsApi } from './services/api';
-import axios from 'axios';
-import Homepage from './components/Homepage/Homepage';
+import { useState, useEffect } from 'react';
+import './styles/DefaultStyles.css';
+import styles from './App.module.css'
+import { fetchPets } from './utilites/fetchPets';
+import HomePage from './components/HomePage/HomePage';
 import OurPetsPage from './components/OurPetsPage/OurPetsPage';
 import NavigationBar from './components/NavigationBar';
 import FooterBlock from './components/FooterBlock';
-import path from './constants/path';
+import Pathes from './constants/Pathes';
 import BurgerMenu from './components/BurgerMenu';
 import Preloader from './components/Preloader';
 import PageNotFound from './components/PageNotFound';
@@ -18,45 +18,23 @@ const App = () => {
     const [isNotFound, setIsNotFound] = useState(false);
 
     useEffect(() => {
-        const fetchPets = async () => {
-            try {
-                const catsResponse = await axios.request(catsApi);
-                const catsData = catsResponse.data;
-                const catsList = catsData.map((cat) => {
-                    return { name: cat.breed, image: cat.img };
-                });
-
-                const catsListLimited = catsList.slice(0, 40);
-
-                const dogsResponse = await axios.request(dogsApi);
-                const dogsData = dogsResponse.data;
-                const dogsList = dogsData.map((dog) => {
-                    return { name: dog.breed, image: dog.img };
-                });
-                const dogsListLimited = dogsList.slice(0, 40);
-
-                const petsListCombined = [
-                    ...catsListLimited,
-                    ...dogsListLimited,
-                ];
-                petsListCombined.sort(() => Math.random() - 0.5);
-
-                setPetsList(petsListCombined);
-            } catch (error) {
-                console.error(error);
-            }
+        const fetchData = async () => {
+            const petsListCombined = await fetchPets();
+            setPetsList(petsListCombined);
         };
-        fetchPets();
+
+        fetchData();
     }, []);
 
     if (!petsList || petsList.length === 0) {
         return <Preloader />;
     }
+
     return (
-        <div className="App">
+        <div className={styles.app}>
             <Router>
                 <header
-                    className="header"
+                    className={styles.header}
                     style={isNotFound ? { display: 'none' } : null}
                 >
                     <div className="container">
@@ -68,15 +46,15 @@ const App = () => {
                 </header>
                 <Routes>
                     <Route
-                        path={path.homepage}
-                        element={<Homepage petsList={petsList} />}
+                        path={Pathes.homePage}
+                        element={<HomePage petsList={petsList} />}
                     />
                     <Route
-                        path={path.ourPetsPage}
+                        path={Pathes.ourPetsPage}
                         element={<OurPetsPage petsList={petsList} />}
                     />
                     <Route
-                        path={path.notFoundPage}
+                        path={Pathes.notFoundPage}
                         element={<PageNotFound />}
                     />
                 </Routes>

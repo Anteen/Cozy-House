@@ -4,43 +4,11 @@ import Slider from 'react-slick';
 import '../../styles/SlickSlider/slick.css';
 import '../../styles/SlickSlider/slick-theme.css';
 import PetCard from '../PetCard';
+import sliderSettings from '../../utilites/sliderSettings';
 
 const PetsSlider = ({ petsList }) => {
     
-    const shortPetsList = petsList.slice(0, 6);
-    const sliderSettings = {
-        dots: false,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        centerMode: false,
-        variableWidth: false,
-        responsive: [
-            {
-                breakpoint: 1100,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
-                },
-            },
-            {
-                breakpoint: 740,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    centerMode: true,
-                },
-            },
-            {
-                breakpoint: 590,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                },
-            },
-        ],
-    };
+    const shortPetsList = petsList.slice(0, 6);  
 
     return (
         <div className={styles.wrapper}>

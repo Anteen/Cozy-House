@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './HelpShelter.module.css';
 import helpingData from '../../data/helpingData';
-import HelpingCard from '../Homepage/HelpingCard'
+import HelpingCard from './HelpingCard'
 
 const HelpShelter = () => {
     return (
@@ -10,10 +10,10 @@ const HelpShelter = () => {
                 <div className={styles.contentWrapper}>
                     <h3 className={styles.title}>How you can help <br/> our shelter</h3>
                     <div className={styles.cardWrapper}>
-                        {helpingData.map((el, index) => {
+                        {helpingData.map((el) => {
                             return (
                                 <HelpingCard
-                                    key={index}
+                                    key={el.id}
                                     {...el}
                                     image={el.image}
                                     title={el.title}

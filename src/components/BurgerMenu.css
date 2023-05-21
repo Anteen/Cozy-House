@@ -1,12 +1,10 @@
 .modalOverlay {
     position: fixed;
     z-index: 101;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    inset: 0;
     background-color: rgba(0, 0, 0, .5);
 }
+
 
 .burgerActive {
     position: absolute;
@@ -31,18 +29,26 @@
     }
 }
 
+.burgerActive .link,
 .burgerActive button {
-    font-family: 'Georgia';
-    font-size: 25px;
-    font-weight: 400;
-    font-style: normal;
-    line-height: 23px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     text-align: center;
     letter-spacing: .06em;
     border: 0;
+    color: black;
     background-color: unset;
+    font-family: 'Georgia';
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 23px;
+    text-decoration: none;
+    outline: none;
+}
+
+.link:visited {
+    color: black;
 }
 
 .closeButton {

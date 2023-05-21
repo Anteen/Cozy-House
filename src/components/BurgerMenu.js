@@ -1,22 +1,26 @@
 import React from 'react';
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import reactDom from 'react-dom';
 import './BurgerMenu.css';
-import path from '../constants/path'
+import Pathes from '../constants/Pathes';
 import closeButton from '../assets/images/close-lg-svgrepo-com.svg';
 
-const burgerMenuElement = document.querySelector('#burger-menu');
-
 const BurgerMenu = ({ activeBurgerMenu, setActiveBurgerMenu }) => {
+    const burgerMenuElementRef = useRef(null);
+
+    useEffect(() => {
+        burgerMenuElementRef.current = document.querySelector('#burger-menu');
+    }, []);
+
     const element = document.createElement('div');
 
     useEffect(() => {
         if (activeBurgerMenu) {
-            burgerMenuElement.appendChild(element);
+            burgerMenuElementRef.current.appendChild(element);
 
             return () => {
-                burgerMenuElement.removeChild(element);
+                burgerMenuElementRef.current.removeChild(element);
             };
         }
     });
@@ -27,12 +31,14 @@ const BurgerMenu = ({ activeBurgerMenu, setActiveBurgerMenu }) => {
         } else {
             document.body.classList.remove('blockBodyScroll');
         }
+
         return () => {
             document.body.classList.remove('blockBodyScroll');
         };
     }, [activeBurgerMenu]);
 
     if (activeBurgerMenu) {
+        
         return reactDom.createPortal(
             <div className="modalOverlay">
                 <div className="burgerActive">
@@ -45,66 +51,39 @@ const BurgerMenu = ({ activeBurgerMenu, setActiveBurgerMenu }) => {
                     <ul className="navigationWrapper">
                         <li>
                             <Link
-                                to={path.homepage}
-                                style={{
-                                    textDecoration: 'none',
-                                    outline: 'none',
-                                }}
+                                to={Pathes.homePage}
+                                className="link"
+                                onClick={() => setActiveBurgerMenu(false)}
                             >
-                                <button
-                                    className="button"
-                                    onClick={() => setActiveBurgerMenu(false)}
-                                >
-                                    About <br /> the shelter
-                                </button>
+                                About <span>the shelter</span>
                             </Link>
                         </li>
                         <li>
                             <Link
-                                to={path.ourPetsPage}
-                                style={{
-                                    textDecoration: 'none',
-                                    outline: 'none',
-                                }}
+                                to={Pathes.ourPetsPage}
+                                className="link"
+                                onClick={() => setActiveBurgerMenu(false)}
                             >
-                                <button
-                                    className="button"
-                                    onClick={() => setActiveBurgerMenu(false)}
-                                >
-                                    Our pets
-                                </button>
+                                Our pets
                             </Link>
                         </li>
                         <li>
                             <Link
-                                to={path.notFoundPage}
-                                style={{
-                                    textDecoration: 'none',
-                                    outline: 'none',
-                                }}
+                                to={Pathes.notFoundPage}
+                                className="link"
+                                onClick={() => setActiveBurgerMenu(false)}
                             >
-                                <button
-                                    className="button"
-                                    onClick={() => setActiveBurgerMenu(false)}
-                                >
-                                    Help <br /> the shelter
-                                </button>
+                                <span>Help</span>
+                                <span>the shelter</span>
                             </Link>
                         </li>
                         <li>
                             <Link
-                                to={path.notFoundPage}
-                                style={{
-                                    textDecoration: 'none',
-                                    outline: 'none',
-                                }}
+                                to={Pathes.notFoundPage}
+                                className="link"
+                                onClick={() => setActiveBurgerMenu(false)}
                             >
-                                <button
-                                    className="button"
-                                    onClick={() => setActiveBurgerMenu(false)}
-                                >
-                                    Contacts
-                                </button>
+                                Contacts
                             </Link>
                         </li>
                     </ul>

@@ -52,7 +52,7 @@
     background-size: cover !important;
 }
 
-.altImage {
+.defaultImage {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -62,6 +62,6 @@
 }
 
 .image,
-.altImage {
+.defaultImage {
     border-radius: 9px 9px 0 0;
 }

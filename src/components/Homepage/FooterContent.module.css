@@ -52,7 +52,7 @@
         height: 208px;
     }
 
-    .wrapper:last-child>.linksWrapper:last-child {
+    .wrapper:last-child > .linksWrapper:last-child {
         width: 100%;
     }
 

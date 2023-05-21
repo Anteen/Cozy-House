@@ -2,9 +2,9 @@ import React from 'react';
 import styles from './FooterBlock.module.css';
 import footerDog from '../assets/images/webp/footer-puppy.webp';
 import footerData from '../data/footerData';
-import FooterContent from './Homepage/FooterContent'
+import FooterContent from './HomePage/FooterContent'
 
-function FooterBlock() {
+const FooterBlock = () => {
     
     return (
         <div className={styles.wrapper}>
