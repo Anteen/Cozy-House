@@ -2,7 +2,7 @@ import React from 'react';
 import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import reactDom from 'react-dom';
-import './BurgerMenu.css';
+import './BurgerMenu.scss';
 import Pathes from '../constants/Pathes';
 import closeButton from '../assets/images/close-lg-svgrepo-com.svg';
 
@@ -38,7 +38,7 @@ const BurgerMenu = ({ activeBurgerMenu, setActiveBurgerMenu }) => {
     }, [activeBurgerMenu]);
 
     if (activeBurgerMenu) {
-        
+
         return reactDom.createPortal(
             <div className="modalOverlay">
                 <div className="burgerActive">

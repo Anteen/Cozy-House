@@ -1,3 +1,5 @@
+@import '../../styles/Mixin.scss';
+
 .wrapper {
     background-color: #f6f6f6;
 }
@@ -9,6 +11,11 @@
     width: 100%;
     padding: 80px 0 100px;
     gap: 60px;
+
+    @include mobile {
+        padding: 42px 0;
+        gap: 42px;
+    }
 }
 
 .title {
@@ -19,8 +26,15 @@
     display: flex;
     align-items: center;
     text-align: center;
-    letter-spacing: .06em;
+    letter-spacing: 0.06em;
     color: #545454;
+
+    @include mobile {
+        font-size: 25px;
+        line-height: 130%;
+        text-align: center;
+        letter-spacing: 0.06em;
+    }
 }
 
 .button {
@@ -31,7 +45,7 @@
     width: 261px;
     height: 52px;
     cursor: pointer;
-    letter-spacing: .06em;
+    letter-spacing: 0.06em;
     color: #292929;
     border: none;
     border-radius: 100px;
@@ -44,18 +58,4 @@
 
 .homeSlider {
     width: 95.5%;
-}
-
-@media screen and (max-width: 590px) {
-    .contentWrapper {
-        padding: 42px 0;
-        gap: 42px;
-    }
-
-    .title {
-        font-size: 25px;
-        line-height: 130%;
-        text-align: center;
-        letter-spacing: .06em;
-    }
 }

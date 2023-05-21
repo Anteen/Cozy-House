@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './PetsSlider.module.css';
+import styles from './PetsSlider.module.scss';
 import Slider from 'react-slick';
 import '../../styles/SlickSlider/slick.css';
 import '../../styles/SlickSlider/slick-theme.css';

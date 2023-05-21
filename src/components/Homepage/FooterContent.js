@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './FooterContent.module.css';
+import styles from './FooterContent.module.scss';
 
 const FooterContent = ({ title, firstIcon, address, secondIcon, contacts }) => {
     return (

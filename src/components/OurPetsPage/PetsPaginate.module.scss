@@ -1,3 +1,5 @@
+@import '../../styles/Mixin.scss';
+
 .wrapper {
     display: grid;
     justify-content: space-between;
@@ -5,6 +7,22 @@
     grid-template-columns: repeat(4, 270px);
     grid-template-rows: repeat(2, auto);
     row-gap: 30px;
+
+    @include laptop {
+        justify-content: space-around;
+        grid-template-columns: repeat(3, 270px);
+        grid-template-rows: repeat(3, auto);
+    }
+
+    @include laptopMini {
+        grid-template-columns: repeat(2, 270px);
+        grid-template-rows: repeat(3, auto);
+    }
+
+    @include tabletMini {
+        grid-template-columns: repeat(1, 270px);
+        grid-template-rows: repeat(3, auto);
+    }
 }
 
 .paginationContainer {
@@ -17,15 +35,25 @@
     margin-top: 30px;
     gap: 20px;
     grid-column: 2/4;
+
+    @include laptop {
+        grid-column: 1/4;
+    }
+
+    @include laptopMini {
+        grid-column: 1/3;
+    }
+
+    @include tabletMini {
+        right: 15px;
+        width: 300px;
+        gap: 10px;
+        grid-column: 1/1;
+    }
 }
 
 .button,
 .pageLink {
-    font-family: 'Georgia';
-    font-size: 20px;
-    font-weight: 400;
-    font-style: normal;
-    line-height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -33,12 +61,17 @@
     height: 52px;
     padding: 0;
     text-align: center;
-    letter-spacing: .06em;
+    letter-spacing: 0.06em;
     color: #292929;
     border: 2px solid #f1cdb3;
     border-radius: 100px;
     outline: none;
     background: transparent;
+    font-family: 'Georgia';
+    font-size: 20px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 100%;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -59,6 +92,19 @@
     width: 340px;
     grid-column: 2/4;
     justify-self: center;
+
+    @include laptop {
+        grid-column: 1/4;
+    }
+
+    @include laptopMini {
+        grid-column: 1/3;
+    }
+
+    @include tabletMini {
+        width: 300px;
+        grid-column: 1/1;
+    }
 }
 
 .startButton,
@@ -87,51 +133,4 @@
 .unactiveButton:hover {
     border: 2px solid #cdcdcd;
     background: none;
-}
-
-@media screen and (max-width: 1200px) {
-    .wrapper {
-        justify-content: space-around;
-        grid-template-columns: repeat(3, 270px);
-        grid-template-rows: repeat(3, auto);
-    }
-
-    .paginationContainer,
-    .additionalButtonsWrapper {
-        grid-column: 1/4;
-    }
-}
-
-@media screen and (max-width: 920px) {
-    .wrapper {
-        grid-template-columns: repeat(2, 270px);
-        grid-template-rows: repeat(3, auto);
-    }
-
-    .paginationContainer,
-    .additionalButtonsWrapper {
-        grid-column: 1/3;
-    }
-
-    .paginationContainer {
-        margin-top: 10px;
-    }
-}
-
-@media screen and (max-width: 620px) {
-    .wrapper {
-        grid-template-columns: repeat(1, 270px);
-        grid-template-rows: repeat(3, auto);
-    }
-
-    .paginationContainer {
-        right: 15px;
-        gap: 10px;
-    }
-
-    .paginationContainer,
-    .additionalButtonsWrapper {
-        width: 300px;
-        grid-column: 1/1;
-    }
 }

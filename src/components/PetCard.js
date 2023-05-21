@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './PetCard.module.css';
+import styles from './PetCard.module.scss';
 import defaultImage from '../assets/images/webp/dog-and-cat.webp';
 
 const PetCard = ({ name, image }) => {

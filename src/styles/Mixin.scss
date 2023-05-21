@@ -1,0 +1,32 @@
+@mixin laptop {
+    @media (max-width: 1200px) { 
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: 769px) { 
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: 590px) {
+        @content;
+    }
+}
+
+// some additional mixins for adaptive
+
+@mixin tabletMini {
+    @media (max-width: 670px) { 
+        @content;
+    }
+}
+
+@mixin laptopMini {
+    @media (max-width: 981px) {
+        @content;
+    }
+}
+

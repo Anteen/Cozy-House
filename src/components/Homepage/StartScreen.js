@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './StartScreen.module.css';
+import styles from './StartScreen.module.scss';
 import headerDog from '../../assets/images/webp/start-screen-puppy.webp';
 
 const StartScreen = () => {

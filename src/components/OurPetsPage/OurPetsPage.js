@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './OurPetsPage.module.css';
+import styles from './OurPetsPage.module.scss';
 import PetsPaginate from './PetsPaginate';
 
 const OurPetsPage = ({ petsList }) => {

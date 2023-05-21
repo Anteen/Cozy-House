@@ -1,3 +1,5 @@
+@import '../styles/Mixin.scss';
+
 .wrapper {
     display: flex;
     align-items: center;
@@ -28,7 +30,7 @@
     line-height: 35px;
     display: flex;
     align-items: center;
-    letter-spacing: .06em;
+    letter-spacing: 0.06em;
     color: #f1cdb3;
 }
 
@@ -40,7 +42,7 @@
     line-height: 15px;
     display: flex;
     align-items: center;
-    letter-spacing: .1em;
+    letter-spacing: 0.1em;
     color: #fff;
 }
 
@@ -48,6 +50,10 @@
     display: flex;
     align-items: center;
     gap: 35px;
+
+    @include tablet {
+        display: none;
+    }
 }
 
 .button,
@@ -80,7 +86,7 @@
     width: 0;
     height: 3px;
     content: '';
-    transition: all .1s ease-in-out;
+    transition: all 0.1s ease-in-out;
     background-color: #f1cdb3;
 }
 
@@ -111,14 +117,8 @@
     cursor: pointer;
     border: none;
     background-color: unset;
-}
 
-@media screen and (max-width: 740px) {
-    .navigationWrapper {
-        display: none;
-    }
-
-    .burger {
+    @include tablet {
         display: block;
     }
 }

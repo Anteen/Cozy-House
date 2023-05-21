@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './HelpingCard.module.css'
+import styles from './HelpingCard.module.scss'
 
 const HelpingCard = ({image, title}) => {
   return (

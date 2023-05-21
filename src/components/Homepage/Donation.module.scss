@@ -1,3 +1,5 @@
+@import '../../styles/Mixin.scss';
+
 .wrapper {
     background: #f6f6f6;
 }
@@ -7,6 +9,22 @@
     justify-content: center;
     padding: 80px 0 100px;
     gap: 30px;
+
+    @include laptopMini {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    @include mobile {
+        padding: 42px 0;
+    }
+}
+
+.contentWrapper > img {
+    @include tabletMini {
+        width: 260px;
+        height: unset;
+    }
 }
 
 .descriptionWrapper {
@@ -15,6 +33,14 @@
     max-width: 380px;
     text-align: start;
     gap: 20px;
+
+    @include laptopMini {
+        order: 1;
+    }
+
+    @include mobile {
+        align-items: center;
+    }
 }
 
 .title {
@@ -24,8 +50,15 @@
     line-height: 45px;
     display: flex;
     align-items: center;
-    letter-spacing: .06em;
+    letter-spacing: 0.06em;
     color: #545454;
+
+    @include mobile {
+        font-size: 25px;
+        line-height: 130%;
+        text-align: center;
+        letter-spacing: 0.06em;
+    }
 }
 
 .subtitle {
@@ -35,8 +68,19 @@
     line-height: 17px;
     display: flex;
     align-items: center;
-    letter-spacing: .06em;
+    letter-spacing: 0.06em;
     color: #545454;
+
+    @include mobile {
+        font-family: 'Arial';
+        font-size: 15px;
+        font-weight: 400;
+        font-style: normal;
+        line-height: 160%;
+        justify-content: center;
+        width: 93.335%;
+        letter-spacing: 0.1px;
+    }
 }
 
 .button {
@@ -50,6 +94,10 @@
     border-radius: 9px;
     background: #f1cdb3;
     gap: 15px;
+
+    @include mobile {
+        width: 93.335%;
+    }
 }
 
 .button:hover {
@@ -63,8 +111,13 @@
     line-height: 23px;
     display: flex;
     align-items: center;
-    letter-spacing: .06em;
+    letter-spacing: 0.06em;
     color: #545454;
+
+    @include mobile {
+        font-size: 15px;
+        line-height: 110%;
+    }
 }
 
 .smallText {
@@ -77,71 +130,16 @@
     align-items: center;
     width: 93.335%;
     color: #b2b2b2;
+
+    @include mobile {
+        text-align: justify;
+    }
 }
 
 .dogImage {
     height: 261px;
-}
 
-@media screen and (max-width: 981px) {
-    .contentWrapper {
-        align-items: center;
-        flex-direction: column;
-    }
-
-    .descriptionWrapper {
-        order: 1;
-    }
-
-    .dogImage {
+    @include laptopMini {
         order: 2;
-    }
-}
-
-@media screen and (max-width: 670px) {
-    .contentWrapper>img {
-        width: 260px;
-        height: unset;
-    }
-}
-
-@media screen and (max-width: 590px) {
-    .contentWrapper {
-        padding: 42px 0;
-    }
-
-    .descriptionWrapper {
-        align-items: center;
-    }
-
-    .title {
-        font-size: 25px;
-        line-height: 130%;
-        text-align: center;
-        letter-spacing: .06em;
-    }
-
-    .subtitle {
-        font-family: 'Arial';
-        font-size: 15px;
-        font-weight: 400;
-        font-style: normal;
-        line-height: 160%;
-        justify-content: center;
-        width: 93.335%;
-        letter-spacing: .1px;
-    }
-
-    .button {
-        width: 93.335%;
-    }
-
-    .number {
-        font-size: 15px;
-        line-height: 110%;
-    }
-
-    .smallText {
-        text-align: justify;
     }
 }

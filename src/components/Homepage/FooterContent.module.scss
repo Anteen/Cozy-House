@@ -1,3 +1,5 @@
+@import '../../styles/Mixin.scss';
+
 .wrapper {
     font-family: 'Georgia';
     font-size: 20px;
@@ -10,8 +12,24 @@
     width: 300px;
     height: 234px;
     text-align: start;
-    letter-spacing: .06em;
+    letter-spacing: 0.06em;
     color: #f1cdb3;
+
+    @include mobile {
+        align-items: center;
+    }
+}
+
+.wrapper:first-child {
+    @include mobile {
+        height: 208px;
+    }
+}
+
+.wrapper:last-child > .linksWrapper:last-child {
+    @include mobile {
+        width: 100%;
+    }
 }
 
 .linksWrapper {
@@ -19,6 +37,10 @@
     align-items: center;
     height: 46px;
     gap: 20px;
+
+    @include tabletMini {
+        height: auto;
+    }
 }
 
 .title {
@@ -26,37 +48,17 @@
     font-weight: 400;
     font-style: normal;
     line-height: 45px;
-    letter-spacing: .06em;
+    letter-spacing: 0.06em;
     color: #fff;
-}
 
-@media screen and (max-width: 670px) {
-    .title {
+    @include tabletMini {
         font-size: 25px;
         line-height: 130%;
         text-align: center;
-        letter-spacing: .06em;
+        letter-spacing: 0.06em;
     }
 
-    .linksWrapper {
-        height: auto;
-    }
-}
-
-@media screen and (max-width: 590px) {
-    .wrapper {
-        align-items: center;
-    }
-
-    .wrapper:first-child {
-        height: 208px;
-    }
-
-    .wrapper:last-child > .linksWrapper:last-child {
-        width: 100%;
-    }
-
-    .title {
+    @include mobile {
         max-width: 270px;
     }
 }

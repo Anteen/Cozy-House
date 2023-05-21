@@ -1,3 +1,5 @@
+@import '../styles/Mixin.scss';
+
 .preloaderWrapper {
     display: flex;
     justify-content: center;
@@ -9,9 +11,8 @@
 
 .preloaderGif {
     height: 95%;
-}
-@media screen and (max-width: 590px) {
-    .preloaderGif {
+
+    @include mobile {
         height: auto;
     }
 }

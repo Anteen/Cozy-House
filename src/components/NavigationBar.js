@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
-import styles from './NavigationBar.module.css';
+import styles from './NavigationBar.module.scss';
 import burgerImage from '../assets/images/burger.svg';
 import burgerImageBlack from '../assets/images/burger-black.svg';
 import Pathes from '../constants/Pathes';

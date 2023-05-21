@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './PageNotFound.module.css';
+import styles from './PageNotFound.module.scss';
 import { Link } from 'react-router-dom';
 import dogPicture from '../assets/images/webp/donation-dog.webp';
 import Pathes from '../constants/Pathes';

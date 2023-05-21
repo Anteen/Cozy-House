@@ -1,7 +1,17 @@
+@import '../../styles/Mixin.scss';
+
 .wrapper {
     margin-top: 120px;
     padding: 80px 0 70px;
     background: #f6f6f6;
+
+    @include laptopMini {
+        padding: 40px 0 56px;
+    }
+
+    @include mobile {
+        padding: 40px 0 0;
+    }
 }
 
 .title {
@@ -13,7 +23,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    letter-spacing: .06em;
+    letter-spacing: 0.06em;
     color: #545454;
 }
 
@@ -47,7 +57,7 @@
     padding: 0;
     cursor: pointer;
     text-align: center;
-    letter-spacing: .06em;
+    letter-spacing: 0.06em;
     color: #292929;
     border: 2px solid #f1cdb3;
     border-radius: 100px;
@@ -64,16 +74,4 @@
     color: #cdcdcd;
     border: 2px solid #cdcdcd;
     background-color: #f6f6f6;
-}
-
-@media screen and (max-width: 920px) {
-    .wrapper {
-        padding: 40px 0 56px;
-    }
-}
-
-@media screen and (max-width: 590px) {
-    .wrapper {
-        padding: 40px 0 0;
-    }
 }

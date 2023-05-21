@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import ReactPaginate from 'react-paginate';
 import PetCard from '../PetCard';
-import styles from './PetsPaginate.module.css';
+import styles from './PetsPaginate.module.scss';
 import { handleResize } from '../../utilites/paginateSettings';
 
 const PetsPaginate = ({ petsList }) => {

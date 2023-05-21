@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './AboutHouse.module.css';
+import styles from './AboutHouse.module.scss';
 import aboutPets from '../../assets/images/webp/about-pets.webp';
 
 function AboutHouse() {

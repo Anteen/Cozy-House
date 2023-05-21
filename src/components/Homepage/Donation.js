@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Donation.module.css';
+import styles from './Donation.module.scss';
 import donationDog from '../../assets/images/webp/donation-dog.webp';
 import creditCard from '../../assets/images/credit-card.svg'
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './FooterBlock.module.css';
+import styles from './FooterBlock.module.scss';
 import footerDog from '../assets/images/webp/footer-puppy.webp';
 import footerData from '../data/footerData';
 import FooterContent from './HomePage/FooterContent'
