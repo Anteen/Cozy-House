@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import './styles/DefaultStyles.css';
-import styles from './App.module.css'
+import styles from './App.module.css';
 import { fetchPets } from './utilites/fetchPets';
 import HomePage from './components/HomePage/HomePage';
 import OurPetsPage from './components/OurPetsPage/OurPetsPage';
@@ -26,24 +26,23 @@ const App = () => {
         fetchData();
     }, []);
 
-    if (!petsList || petsList.length === 0) {
+    if (!petsList || !petsList.length) {
         return <Preloader />;
     }
 
     return (
         <div className={styles.app}>
             <Router>
-                <header
-                    className={styles.header}
-                    style={isNotFound ? { display: 'none' } : null}
-                >
-                    <div className="container">
-                        <NavigationBar
-                            setActiveBurgerMenu={setActiveBurgerMenu}
-                            setIsNotFound={setIsNotFound}
-                        />
-                    </div>
-                </header>
+                {!isNotFound ? (
+                    <header className={styles.header}>
+                        <div className="container">
+                            <NavigationBar
+                                setActiveBurgerMenu={setActiveBurgerMenu}
+                                setIsNotFound={setIsNotFound}
+                            />
+                        </div>
+                    </header>
+                ) : null}
                 <Routes>
                     <Route
                         path={Pathes.homePage}
@@ -56,11 +55,14 @@ const App = () => {
                     <Route
                         path={Pathes.notFoundPage}
                         element={<PageNotFound />}
+                        setIsNotFound={setIsNotFound}
                     />
                 </Routes>
-                <footer style={isNotFound ? { display: 'none' } : null}>
-                    <FooterBlock />
-                </footer>
+                {!isNotFound ? (
+                    <footer>
+                        <FooterBlock />
+                    </footer>
+                ) : null}
                 <BurgerMenu
                     activeBurgerMenu={activeBurgerMenu}
                     setActiveBurgerMenu={setActiveBurgerMenu}

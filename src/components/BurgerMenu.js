@@ -38,7 +38,6 @@ const BurgerMenu = ({ activeBurgerMenu, setActiveBurgerMenu }) => {
     }, [activeBurgerMenu]);
 
     if (activeBurgerMenu) {
-
         return reactDom.createPortal(
             <div className="modalOverlay">
                 <div className="burgerActive">

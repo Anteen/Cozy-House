@@ -13,7 +13,7 @@ const PetCard = ({ name, image }) => {
             ) : (
                 <div
                     className={styles.image}
-                    style={{ background: `url(${image})` }}
+                    style={{ background: `url(${image}) 0% 0% / cover` }}
                 ></div>
             )}
             <h4 className={styles.title}>{name}</h4>

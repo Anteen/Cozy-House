@@ -8,7 +8,7 @@ const OurPetsPage = ({ petsList }) => {
         <main className={styles.wrapper}>
             <div className="container">
                 <h3 className={styles.title}>
-                    Our friends who <br /> are looking for a house
+                    Our friends who <span>are looking for a house</span>
                 </h3>
                 <PetsPaginate petsList={petsList} />
             </div>

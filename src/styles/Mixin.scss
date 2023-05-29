@@ -16,8 +16,6 @@
     }
 }
 
-// some additional mixins for adaptive
-
 @mixin tabletMini {
     @media (max-width: 670px) { 
         @content;

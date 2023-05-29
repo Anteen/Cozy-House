@@ -54,31 +54,31 @@
 }
 
 .title {
+    display: flex;
+    align-items: center;
     font-size: 44px;
     font-weight: 400;
     font-style: normal;
     line-height: 57px;
-    display: flex;
-    align-items: center;
     color: #fff;
 
     @include mobile {
+        align-self: center;
         font-size: 25px;
         line-height: 130%;
-        align-self: center;
         text-align: center;
         letter-spacing: 0.06em;
     }
 }
 
 .subtitle {
+    display: flex;
+    align-items: center;
     font-family: 'Arial';
     font-size: 15px;
     font-weight: 400;
     font-style: normal;
     line-height: 24px;
-    display: flex;
-    align-items: center;
     color: #cdcdcd;
 
     @include mobile {
@@ -87,17 +87,17 @@
 }
 
 .button {
-    font-size: 17px;
-    font-weight: 400;
-    font-style: normal;
-    line-height: 22px;
+    cursor: pointer;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
     width: 207px;
     height: 52px;
-    cursor: pointer;
+    font-size: 17px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 22px;
     letter-spacing: 0.06em;
     color: #292929;
     border: none;

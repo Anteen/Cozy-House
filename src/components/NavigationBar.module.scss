@@ -24,24 +24,24 @@
 }
 
 .title {
+    display: flex;
+    align-items: center;
     font-size: 32px;
     font-weight: 400;
     font-style: normal;
     line-height: 35px;
-    display: flex;
-    align-items: center;
     letter-spacing: 0.06em;
     color: #f1cdb3;
 }
 
 .subtitle {
+    line-height: 15px;
+    display: flex;
+    align-items: center;
     font-family: 'Arial';
     font-size: 13px;
     font-weight: 400;
     font-style: normal;
-    line-height: 15px;
-    display: flex;
-    align-items: center;
     letter-spacing: 0.1em;
     color: #fff;
 }
@@ -59,14 +59,14 @@
 .button,
 .homeButton,
 .ourPetsButton {
+    cursor: pointer;
+    position: relative;
+    z-index: 100;
     font-family: 'Arial';
     font-size: 15px;
     font-weight: 400;
     font-style: normal;
     line-height: 24px;
-    position: relative;
-    z-index: 100;
-    cursor: pointer;
     color: #cdcdcd;
     border: none;
     background: none;

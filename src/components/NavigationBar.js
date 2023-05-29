@@ -11,11 +11,7 @@ const NavigationBar = ({ setActiveBurgerMenu, setIsNotFound }) => {
 
     useEffect(() => {
         const changeStyles = () => {
-            if (location.pathname === Pathes.notFoundPage) {
-                setIsNotFound(true);
-            } else {
-                setIsNotFound(false);
-            }
+            setIsNotFound(location.pathname === Pathes.notFoundPage)
         };
         changeStyles();
     }, [location]);

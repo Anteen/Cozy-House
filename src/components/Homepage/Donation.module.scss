@@ -44,12 +44,12 @@
 }
 
 .title {
+    display: flex;
+    align-items: center;
     font-size: 35px;
     font-weight: 400;
     font-style: normal;
     line-height: 45px;
-    display: flex;
-    align-items: center;
     letter-spacing: 0.06em;
     color: #545454;
 
@@ -62,34 +62,34 @@
 }
 
 .subtitle {
+    display: flex;
+    align-items: center;
     font-size: 15px;
     font-weight: 400;
     font-style: normal;
     line-height: 17px;
-    display: flex;
-    align-items: center;
     letter-spacing: 0.06em;
     color: #545454;
 
     @include mobile {
+        justify-content: center;
+        width: 93.335%;
         font-family: 'Arial';
         font-size: 15px;
         font-weight: 400;
         font-style: normal;
         line-height: 160%;
-        justify-content: center;
-        width: 93.335%;
         letter-spacing: 0.1px;
     }
 }
 
 .button {
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 349px;
     height: 43px;
-    cursor: pointer;
     border: none;
     border-radius: 9px;
     background: #f1cdb3;
@@ -105,12 +105,12 @@
 }
 
 .number {
+    display: flex;
+    align-items: center;
     font-size: 20px;
     font-weight: 400;
     font-style: normal;
     line-height: 23px;
-    display: flex;
-    align-items: center;
     letter-spacing: 0.06em;
     color: #545454;
 
@@ -121,14 +121,14 @@
 }
 
 .smallText {
+    display: flex;
+    align-items: center;
+    width: 93.335%;
     font-family: 'Arial';
     font-size: 12px;
     font-weight: 400;
     font-style: italic;
     line-height: 18px;
-    display: flex;
-    align-items: center;
-    width: 93.335%;
     color: #b2b2b2;
 
     @include mobile {

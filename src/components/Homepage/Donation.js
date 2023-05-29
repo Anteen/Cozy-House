@@ -3,7 +3,7 @@ import styles from './Donation.module.scss';
 import donationDog from '../../assets/images/webp/donation-dog.webp';
 import creditCard from '../../assets/images/credit-card.svg'
 
-function Donation() {
+const Donation = () => {
     return (
         <div className={styles.wrapper}>
             <div className="container">

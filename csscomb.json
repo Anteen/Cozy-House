@@ -27,22 +27,6 @@
     "vendor-prefix-align": true,
     "sort-order": [
         [
-            "font",
-            "font-family",
-            "font-size",
-            "font-weight",
-            "font-style",
-            "font-variant",
-            "font-size-adjust",
-            "font-stretch",
-            "font-effect",
-            "font-emphasize",
-            "font-emphasize-position",
-            "font-emphasize-style",
-            "font-smooth",
-            "line-height"
-        ],
-        [
             "position",
             "z-index",
             "top",
@@ -143,6 +127,22 @@
             "list-style-position",
             "list-style-type",
             "list-style-image"
+        ],
+        [
+            "font",
+            "font-family",
+            "font-size",
+            "font-weight",
+            "font-style",
+            "font-variant",
+            "font-size-adjust",
+            "font-stretch",
+            "font-effect",
+            "font-emphasize",
+            "font-emphasize-position",
+            "font-emphasize-style",
+            "font-smooth",
+            "line-height"
         ],
         [
             "content",
