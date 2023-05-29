@@ -1,0 +1,124 @@
+@import '../styles/Mixin.scss';
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+.ourPetsWrapper .title,
+.notFoundWrapper .title,
+.ourPetsWrapper .subtitle,
+.ourPetsWrapper .button,
+.notFoundWrapper .subtitle,
+.notFoundWrapper .button {
+    color: #545454;
+}
+
+.labelWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    font-size: 32px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 35px;
+    letter-spacing: 0.06em;
+    color: #f1cdb3;
+}
+
+.subtitle {
+    line-height: 15px;
+    display: flex;
+    align-items: center;
+    font-family: 'Arial';
+    font-size: 13px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.1em;
+    color: #fff;
+}
+
+.navigationWrapper {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+
+    @include tablet {
+        display: none;
+    }
+}
+
+.button,
+.homeButton,
+.ourPetsButton {
+    cursor: pointer;
+    position: relative;
+    z-index: 100;
+    font-family: 'Arial';
+    font-size: 15px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 24px;
+    color: #cdcdcd;
+    border: none;
+    background: none;
+}
+
+.homeButton {
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.button::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    content: '';
+    transition: all 0.1s ease-in-out;
+    background-color: #f1cdb3;
+}
+
+.buttonActive::before {
+    width: 100%;
+}
+
+.button:hover::before,
+.ourPetsButton:hover::before {
+    width: 100%;
+}
+
+.homePageActive {
+    color: #fafafa;
+}
+
+.ourPetsPageActive,
+.helpingPageActive,
+.contactsPageActive {
+    color: #292929 !important;
+}
+
+.burger {
+    position: relative;
+    z-index: 100;
+    display: none;
+    margin-right: 13px;
+    cursor: pointer;
+    border: none;
+    background-color: unset;
+
+    @include tablet {
+        display: block;
+    }
+}

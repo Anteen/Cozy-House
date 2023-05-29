@@ -1,0 +1,61 @@
+@import '../../styles/Mixin.scss';
+
+.wrapper {
+    background-color: #f6f6f6;
+}
+
+.contentWrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 80px 0 100px;
+    gap: 60px;
+
+    @include mobile {
+        padding: 42px 0;
+        gap: 42px;
+    }
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 45px;
+    letter-spacing: 0.06em;
+    color: #545454;
+
+    @include mobile {
+        font-size: 25px;
+        line-height: 130%;
+        text-align: center;
+        letter-spacing: 0.06em;
+    }
+}
+
+.button {
+    cursor: pointer;
+    width: 261px;
+    height: 52px;
+    font-size: 17px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 22px;
+    letter-spacing: 0.06em;
+    color: #292929;
+    border: none;
+    border-radius: 100px;
+    background: #f1cdb3;
+}
+
+.button:hover {
+    background: #fddcc4;
+}
+
+.homeSlider {
+    width: 95.5%;
+}

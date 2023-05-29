@@ -1,0 +1,145 @@
+@import '../../styles/Mixin.scss';
+
+.wrapper {
+    background: #f6f6f6;
+}
+
+.contentWrapper {
+    display: flex;
+    justify-content: center;
+    padding: 80px 0 100px;
+    gap: 30px;
+
+    @include laptopMini {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    @include mobile {
+        padding: 42px 0;
+    }
+}
+
+.contentWrapper > img {
+    @include tabletMini {
+        width: 260px;
+        height: unset;
+    }
+}
+
+.descriptionWrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 380px;
+    text-align: start;
+    gap: 20px;
+
+    @include laptopMini {
+        order: 1;
+    }
+
+    @include mobile {
+        align-items: center;
+    }
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    font-size: 35px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 45px;
+    letter-spacing: 0.06em;
+    color: #545454;
+
+    @include mobile {
+        font-size: 25px;
+        line-height: 130%;
+        text-align: center;
+        letter-spacing: 0.06em;
+    }
+}
+
+.subtitle {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 17px;
+    letter-spacing: 0.06em;
+    color: #545454;
+
+    @include mobile {
+        justify-content: center;
+        width: 93.335%;
+        font-family: 'Arial';
+        font-size: 15px;
+        font-weight: 400;
+        font-style: normal;
+        line-height: 160%;
+        letter-spacing: 0.1px;
+    }
+}
+
+.button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 349px;
+    height: 43px;
+    border: none;
+    border-radius: 9px;
+    background: #f1cdb3;
+    gap: 15px;
+
+    @include mobile {
+        width: 93.335%;
+    }
+}
+
+.button:hover {
+    background: #fddcc4;
+}
+
+.number {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 23px;
+    letter-spacing: 0.06em;
+    color: #545454;
+
+    @include mobile {
+        font-size: 15px;
+        line-height: 110%;
+    }
+}
+
+.smallText {
+    display: flex;
+    align-items: center;
+    width: 93.335%;
+    font-family: 'Arial';
+    font-size: 12px;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 18px;
+    color: #b2b2b2;
+
+    @include mobile {
+        text-align: justify;
+    }
+}
+
+.dogImage {
+    height: 261px;
+
+    @include laptopMini {
+        order: 2;
+    }
+}

@@ -1,0 +1,10 @@
+@import '../src/styles/DefaultStyles.css';
+
+* {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body {
+  font-family: 'Roboto', 'Ubuntu', 'Helvetica Neue',
+    sans-serif;
+}

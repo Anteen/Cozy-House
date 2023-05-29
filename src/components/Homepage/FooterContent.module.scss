@@ -1,0 +1,64 @@
+@import '../../styles/Mixin.scss';
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 300px;
+    height: 234px;
+    text-align: start;
+    font-family: 'Georgia';
+    font-size: 20px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 23px;
+    letter-spacing: 0.06em;
+    color: #f1cdb3;
+
+    @include mobile {
+        align-items: center;
+    }
+}
+
+.wrapper:first-child {
+    @include mobile {
+        height: 208px;
+    }
+}
+
+.wrapper:last-child > .linksWrapper:last-child {
+    @include mobile {
+        width: 100%;
+    }
+}
+
+.linksWrapper {
+    display: flex;
+    align-items: center;
+    height: 46px;
+    gap: 20px;
+
+    @include tabletMini {
+        height: auto;
+    }
+}
+
+.title {
+    font-size: 35px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 45px;
+    letter-spacing: 0.06em;
+    color: #fff;
+
+    @include tabletMini {
+        font-size: 25px;
+        line-height: 130%;
+        text-align: center;
+        letter-spacing: 0.06em;
+    }
+
+    @include mobile {
+        max-width: 270px;
+    }
+}

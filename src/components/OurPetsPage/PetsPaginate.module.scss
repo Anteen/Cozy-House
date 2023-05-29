@@ -1,0 +1,139 @@
+@import '../../styles/Mixin.scss';
+
+.wrapper {
+    display: grid;
+    justify-content: space-between;
+    margin-top: 60px;
+    grid-template-columns: repeat(4, 270px);
+    grid-template-rows: repeat(2, auto);
+    row-gap: 30px;
+
+    @include laptop {
+        justify-content: space-around;
+        grid-template-columns: repeat(3, 270px);
+        grid-template-rows: repeat(3, auto);
+    }
+
+    @include laptopMini {
+        grid-template-columns: repeat(2, 270px);
+        grid-template-rows: repeat(3, auto);
+    }
+
+    @include tabletMini {
+        grid-template-columns: repeat(1, 270px);
+        grid-template-rows: repeat(3, auto);
+    }
+    @include mobile {
+        margin-top: 45px;
+    }
+}
+
+.paginationContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 340px;
+    margin: auto;
+    margin-top: 30px;
+    gap: 20px;
+    grid-column: 2/4;
+
+    @include laptop {
+        grid-column: 1/4;
+    }
+
+    @include laptopMini {
+        grid-column: 1/3;
+    }
+
+    @include tabletMini {
+        right: 15px;
+        width: 300px;
+        gap: 10px;
+        grid-column: 1/1;
+    }
+}
+
+.button,
+.pageLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    padding: 0;
+    font-family: 'Georgia';
+    font-size: 20px;
+    outline: none;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    letter-spacing: 0.06em;
+    line-height: 100%;
+    color: #292929;
+    border: 2px solid #f1cdb3;
+    border-radius: 100px;
+    background: transparent;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.button {
+    cursor: pointer;
+}
+
+.button:hover {
+    border: 2px solid #fddcc4;
+    outline: none;
+    background: #fddcc4;
+}
+
+.additionalButtonsWrapper {
+    position: relative;
+    bottom: 30px;
+    width: 340px;
+    grid-column: 2/4;
+    justify-self: center;
+
+    @include laptop {
+        grid-column: 1/4;
+    }
+
+    @include laptopMini {
+        grid-column: 1/3;
+    }
+
+    @include tabletMini {
+        width: 300px;
+        grid-column: 1/1;
+    }
+}
+
+.startButton,
+.endButton {
+    position: absolute;
+    bottom: 0;
+}
+
+.startButton {
+    left: 0;
+}
+
+.endButton {
+    right: 0;
+}
+
+.disabled button,
+.unactiveButton {
+    cursor: auto;
+    color: #cdcdcd;
+    border: 2px solid #cdcdcd;
+    border-radius: 50%;
+}
+
+.disabled button:hover,
+.unactiveButton:hover {
+    border: 2px solid #cdcdcd;
+    background: none;
+}
