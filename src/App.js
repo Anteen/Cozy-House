@@ -54,8 +54,7 @@ const App = () => {
                     />
                     <Route
                         path={Pathes.notFoundPage}
-                        element={<PageNotFound />}
-                        setIsNotFound={setIsNotFound}
+                        element={<PageNotFound setIsNotFound={setIsNotFound} />}
                     />
                 </Routes>
                 {!isNotFound ? (
